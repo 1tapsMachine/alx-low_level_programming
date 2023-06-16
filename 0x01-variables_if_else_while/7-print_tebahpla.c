@@ -7,13 +7,13 @@
 */
 int main(void)
 {
-char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-int i = 26;
-while (i > 0)
+char alphabet;
+alphabet='z';
+
+while (alphabet >= 'a')
 {
-alphabet[strlen(alphabet) - 1] = '\0';
-putchar(alphabet[i]);
-i--;
+putchar(alphabet);
+alphabet--;
 }
 putchar('\n');
 return (0);
