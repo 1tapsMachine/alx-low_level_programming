@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
 * main - prints the alphabet in lowercase
 *
@@ -11,6 +12,12 @@ int i = 0;
 while (i < 26)
 {
 putchar(alphabet[i]);
+i++;
+}
+i = 0;
+while (i < 26)
+{
+putchar(toupper(alphabet[i]));
 i++;
 }
 putchar('\n');
