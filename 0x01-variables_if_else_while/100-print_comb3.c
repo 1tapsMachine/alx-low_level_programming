@@ -6,9 +6,10 @@
 */
 int main(void)
 {
-for (int i = 0; i < 9; i++)
+int i, j;
+for (i = 0; i < 9; i++)
 {
-for (int j = i; i < 10; j++)
+for (j = i; i < 10; j++)
 {
 if (i != j)
 {
