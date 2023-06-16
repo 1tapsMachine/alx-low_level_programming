@@ -7,10 +7,9 @@
 int main(void)
 {
 int i = 0;
-char numberz[] = "0123456789";
 while (i < 10)
 {
-putchar(numberz[i]);
+putchar(i + '0');
 i++;
 }
 putchar('\n');
