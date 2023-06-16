@@ -12,12 +12,12 @@ while (digit< 10)
 if(digit < 9)
 {
 putchar(digit + '0');
-putchar(',');
-putchar(' ');
+putchar(', ');
 digit++;
 }
 else{
 putchar(digit + '0');
+putchar('\n');
 digit++;
 }
 
