@@ -7,10 +7,11 @@
 int main(void)
 {
 char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-
-for (size_t i = 0; i < (sizeof(alphabet) / sizeof(char)); i++)
+int i = 0;
+while(i < 26)
 {
 putchar(alphabet[i]);
+i++;
 }
 return (0);
 }
