@@ -13,11 +13,11 @@ for (j = 0; j < 10; j++)
 {
 for (k = i; k < 10; k++)
 {
-if (k == i) 
+if (k == i)
 {
 l = j + 1;
-} 
-else 
+}
+else
 {
 l = 0;
 }
