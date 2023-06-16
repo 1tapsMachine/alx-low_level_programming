@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include <time.h>
 /**
  * main - gets the last digit of a random number and
@@ -13,7 +14,7 @@ srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n < 0)
 {
-n = (-n);
+n = abs(n);
 lastDigit = -(n % 10);
 }
 else if (n > 0)
