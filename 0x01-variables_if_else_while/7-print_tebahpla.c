@@ -11,6 +11,11 @@ char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 int i = 26;
 while (i > 0)
 {
+if (alphabet[i] == '\0')
+{
+continue;
+i++;
+}
 putchar(alphabet[i]);
 i--;
 }
