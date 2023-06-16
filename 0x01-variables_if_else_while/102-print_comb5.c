@@ -13,7 +13,15 @@ for (j = 0; j < 10; j++)
 {
 for (k = i; k < 10; k++)
 {
-for (l = j + 1; l < 10; l++)
+if (k == i) 
+{
+l = j + 1;
+} 
+else 
+{
+l = 0;
+}
+for (; l < 10; l++)
 {
 putchar(i + '0');
 putchar(j + '0');
