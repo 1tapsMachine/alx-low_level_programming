@@ -5,7 +5,7 @@
 *
 * Return: void
 */
-void main(void)
+int main(void)
 {
 int lastNum,thisNum,nextNum,count;
 lastNum = 1;
@@ -22,4 +22,5 @@ thisNum = nextNum;
 count++;
 }
 printf("\n");
+return (0);
 }
