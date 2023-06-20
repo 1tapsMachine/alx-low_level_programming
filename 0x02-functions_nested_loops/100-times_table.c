@@ -37,11 +37,3 @@ printf("\n");
 }
 }
 }
-
-
-
-
-int main(void)
-{
-print_times_table(3);
-}
