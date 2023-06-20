@@ -1,24 +1,27 @@
 #include <stdio.h>
+
 /**
-* main - prints fibonacci sequence up to 50 numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - prints the first 98 Fibonacci numbers
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int i, count;
-unsigned long last, this, next;
-last = 1;
-this = 2;
-count = 98;
-for (i = 0; i < count; i++)
+int i;
+unsigned long int last = 1, this = 2, next;
+for (i = 0; i < 98; i++)
 {
-printf("%lu, ", last);
+printf("%lu", this);
+}
+if (i < 97)
+{
+printf(", ");
 next = last + this;
 last = this;
 this = next;
 }
-printf("%lu", last);
 printf("\n");
-return (0);
+return 0;
 }
+
+
