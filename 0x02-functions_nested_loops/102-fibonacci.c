@@ -15,11 +15,11 @@ for (i = 0; i < count; i++)
 {
 if (i == 1)
 {
-printf("%d", last);
+printf("%lld", last);
 }
 else
 {
-printf("%d, ", last);
+printf("%lld, ", last);
 next = last + this;
 last = this;
 this = next;
