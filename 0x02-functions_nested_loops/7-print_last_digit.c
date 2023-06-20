@@ -15,7 +15,7 @@ if (n < 0)
 last_digit = -1 * (n % 10);
 _putchar(last_digit + '0');
 }
-else if (n > 0)
+else
 {
 last_digit = n % 10;
 _putchar(last_digit + '0');
