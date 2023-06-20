@@ -14,5 +14,4 @@ _putchar(alphabet[i]);
 i++;
 }
 _putchar('\n');
-return (0);
 }
