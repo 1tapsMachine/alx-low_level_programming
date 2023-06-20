@@ -22,5 +22,6 @@ count += last;
 }
 }
 }
+printf("%lu\n", count);
 return (0);
 }
