@@ -36,4 +36,5 @@ printf(", %d", prod);
 printf("\n");
 }
 }
+return (0);
 }

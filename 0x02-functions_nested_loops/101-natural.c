@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "main.h"
 /**
-* fibonacci - prints the first 50 Fibonacci numbers, starting with 1 and 2
+* fibonacci - prints the first 50 Fibonacci 
+* numbers, starting with 1 and 2
 *
-* Return: Always 0 (Success)
+* Return: void
 */
-void fibonacci(void)
+void main(void)
 {
 int lastNum,thisNum,nextNum,count;
 lastNum = 1;
@@ -21,4 +21,5 @@ lastNum = thisNum;
 thisNum = nextNum;
 count++;
 }
+printf("\n");
 }
