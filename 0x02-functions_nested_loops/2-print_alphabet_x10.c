@@ -10,6 +10,13 @@ void print_alphabet_x10(void)
 int i = 0;
 for (i = 0; i < 10; i++)
 {
-print_alphabet();
+char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+int i = 0;
+while (i < 26)
+{
+_putchar(alphabet[i]);
+i++;
+}
+_putchar('\n');
 }
 }
