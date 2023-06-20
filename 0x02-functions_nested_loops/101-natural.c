@@ -7,20 +7,13 @@
 */
 int main(void)
 {
-int lastNum,thisNum,nextNum,count;
-lastNum = 1;
-thisNum = 2;
-nextNum = 0;
-count = 0;
-printf("%d, %d, ", lastNum, thisNum);
-while (count < 50)
+int i, sum;
+for(i = 0; i < 1024; i++)
 {
-nextNum = lastNum + thisNum;
-printf("%d, ", nextNum);
-lastNum = thisNum;
-thisNum = nextNum;
-count++;
+if (i % 3 == 0 || i % 5 == 0)
+{
+sum+=i;
 }
-printf("\n");
-return (0);
+}
+printf("%d\n", sum);
 }
