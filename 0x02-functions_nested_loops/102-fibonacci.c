@@ -13,17 +13,10 @@ this = 2;
 count = 50;
 for (i = 0; i < count; i++)
 {
-if (i == 0)
-{
-printf("%lu", last);
-}
-else
-{
 printf("%lu, ", last);
 next = last + this;
 last = this;
 this = next;
-}
 }
 printf("%lu", last);
 return (0);
