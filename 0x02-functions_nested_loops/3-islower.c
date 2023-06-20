@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
 * main - Entry point
 *
@@ -6,8 +6,8 @@
 */
 int _islower(int c)
 {
-char alpha="a";
-for(alpha="a";alpha<="z";alpha++)
+char alpha = 'a';
+for(alpha= 'a';alpha<= 'z';alpha++)
 {
 if(alpha==c)
 {
