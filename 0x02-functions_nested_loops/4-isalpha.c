@@ -10,7 +10,7 @@ int _isalpha(int c)
 {
 char alpha = 'a';
 char alpha2 = 'A';
-for (alpha = 'a' , alpha2='A';alpha2 <= 'Z' && alpha <= 'z' ; alpha++ , alpha2++)
+for (; alpha2 <= 'Z' && alpha <= 'z' ; alpha++, alpha2++)
 {
 if (alpha == c || alpha2 == c)
 {
