@@ -6,9 +6,10 @@
 */
 int main(void)
 {
-int i, count, last, this, next;
+int i, count;
+unsigned long long last, this, next;
 last = 1;
-this = 2;	
+this = 2;
 count = 50;
 for (i = 0; i < count; i++)
 {
