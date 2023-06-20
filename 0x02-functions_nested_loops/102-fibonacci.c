@@ -6,17 +6,24 @@
 */
 int main(void)
 {
-int prevNum, thisNum, nextNum, count;
-prevNum = 1;
-thisNum = 2;
-count = 0;
-while (count < 54)
+int i, count, last, this, next;
+last = 1;
+this = 2;	
+count = 50;
+for (i = 0; i < count; i++)
 {
-printf("%d, ", prevNum);
-nextNum = prevNum + thisNum;
-prevNum = thisNum;
-thisNum = nextNum;
-count++;
+if (i == 1)
+{
+printf("%d", last);
 }
+else
+{
+printf("%d, ", last);
+next = last + this;
+last = this;
+this = next;
+}
+}
+printf("\n");
 return (0);
 }
