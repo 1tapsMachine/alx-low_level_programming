@@ -6,8 +6,7 @@
 */
 int main(void)
 {
-int count;
-unsigned long last, this, next;
+unsigned long last, this, next, count;
 last = 1;
 this = 2;
 while (last < 4000000)
