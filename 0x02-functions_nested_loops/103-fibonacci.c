@@ -21,6 +21,6 @@ if (last % 2 == 0)
 count += last;
 }
 }
-return (0);
 }
+return (0);
 }
