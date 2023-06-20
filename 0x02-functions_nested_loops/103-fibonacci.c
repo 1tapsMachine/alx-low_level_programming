@@ -23,10 +23,9 @@ count += last;
 }
 if (count > 4000000)
 {
-break;
-}
-}
 printf("%d\n", count);
 return (0);
+}
+}
 }
 }
