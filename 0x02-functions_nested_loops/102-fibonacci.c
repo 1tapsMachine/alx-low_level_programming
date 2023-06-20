@@ -13,7 +13,7 @@ this = 2;
 count = 50;
 for (i = 0; i < count; i++)
 {
-if (last == 1)
+if (i == 0)
 {
 printf("%lu", last);
 }
