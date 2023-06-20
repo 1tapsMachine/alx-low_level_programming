@@ -6,15 +6,18 @@
 */
 void fibonacci(void)
 {
-    int prevNum,thisNum,nextNum;
-    prevNum=1;
-    thisNum=2;
-    nextNum=3;
-    while (thisNum < 50)
-    {
-        printf("%d, ", prevNum);
-        nextNum = prevNum + thisNum;
-        prevNum = thisNum;
-        thisNum = nextNum;
-    }
+int lastNum,thisNum,nextNum,count;
+lastNum = 1;
+thisNum = 2;
+nextNum = 0;
+count = 0;
+printf("%d, %d, ", lastNum, thisNum);
+while (count < 50)
+{
+nextNum = lastNum + thisNum;
+printf("%d, ", nextNum);
+lastNum = thisNum;
+thisNum = nextNum;
+count++;
+}
 }
