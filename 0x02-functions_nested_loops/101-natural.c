@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
-* fibonacci - prints the first 50 Fibonacci
-* numbers, starting with 1 and 2
+* main - prints all natural numbers below 1024 that are multiples of 3 or 5
 *
-* Return: void
+* Return: Always 0 (Success)
 */
 int main(void)
 {
