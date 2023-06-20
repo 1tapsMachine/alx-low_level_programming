@@ -7,7 +7,7 @@
 int main(void)
 {
 int i, count;
-unsigned long long last, this, next;
+unsigned long last, this, next;
 last = 1;
 this = 2;
 count = 50;
@@ -15,11 +15,11 @@ for (i = 0; i < count; i++)
 {
 if (i == 1)
 {
-printf("%llu", last);
+printf("%lu", last);
 }
 else
 {
-printf("%llu, ", last);
+printf("%lu, ", last);
 next = last + this;
 last = this;
 this = next;
