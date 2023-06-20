@@ -1,18 +1,16 @@
 #include <stdio.h>
 /**
-* main - Entry point
+* fibonacci - prints the first 50 Fibonacci numbers, starting with 1 and 2
 *
 * Return: Always 0 (Success)
 */
 void fibonacci(void)
 {
-    int prevNum,thisNum,nextNum,userInput;
-    printf("Enter a number: ");
-    scanf("%d", &userInput);
-    prevNum=0;
-    thisNum=1;
-    nextNum=1;
-    while (thisNum < userInput)
+    int prevNum,thisNum,nextNum;
+    prevNum=1;
+    thisNum=2;
+    nextNum=3;
+    while (thisNum < 50)
     {
         printf("%d, ", prevNum);
         nextNum = prevNum + thisNum;
