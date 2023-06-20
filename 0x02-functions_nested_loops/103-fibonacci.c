@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-int i, count;
+int count;
 unsigned long last, this, next;
 last = 1;
 this = 2;
