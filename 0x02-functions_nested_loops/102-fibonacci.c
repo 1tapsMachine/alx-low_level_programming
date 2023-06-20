@@ -10,7 +10,7 @@ int i, count;
 unsigned long last, this, next;
 last = 1;
 this = 2;
-count = 50;
+count = 49;
 for (i = 0; i < count; i++)
 {
 printf("%lu, ", last);
