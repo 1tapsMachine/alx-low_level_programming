@@ -9,13 +9,13 @@ int main(void)
 unsigned long last, this, next, count;
 last = 1;
 this = 2;
-while (count < 4000000)
+while (last < 4000000)
 {
 {
 next = last + this;
 last = this;
 this = next;
-if (last % 2 == 0)
+if (last % 2 == 0 && last < 4000000)
 {
 count += last;
 }
