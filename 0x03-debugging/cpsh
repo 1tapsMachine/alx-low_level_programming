@@ -1,6 +1,0 @@
-!#/bin/bash
-git add . ;
-read -p "Type a commit message : " message ;
-git commit -m $message;
-git push;
-
