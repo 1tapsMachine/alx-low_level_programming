@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-    long int number = 1231952; 
+    long int number = 612852475143; 
     int factor = 2, largest_factor;
     while (number != 0)
     {
