@@ -13,7 +13,7 @@ int main(void)
 
 	for (; i <= 100; i++)
 	{
-		if (i != 100)
+		if (i != (100 && 1))
 		{
 			printf(" ");
 		}
