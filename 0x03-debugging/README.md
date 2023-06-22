@@ -1,6 +1,5 @@
 DEBUGGING
 ===
-Abstract:xxx
 ## Papar Information
 - Title:  `0x03-debugging`
 - Authors:  `aziz samix`
