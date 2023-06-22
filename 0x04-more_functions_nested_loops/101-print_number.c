@@ -8,19 +8,17 @@
 */
 void print_number(int n)
 {
+	unsigned int si7ri = n;
+	
 	if (n < 0)
 	{
 
 		_putchar(45);
-		n = -n;
+		si7ri = -n;
 	}
-    else
-    {
-        n = n;
-    }
-	if (n / 10)
+	if (si7ri / 10)
 	{
-		print_number(n / 10);
+		print_number(si7ri / 10);
 	}
-	_putchar((n % 10)+ '0');
+	_putchar(si7ri % 10 + '0');
 }
