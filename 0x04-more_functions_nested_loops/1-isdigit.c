@@ -6,15 +6,12 @@
 */
 int _isdigit(char c)
 {
-	char n = '0';
-
-	for (; n <= '9'; n++)
-	{
-	if (c == n)
+	if(c >= '0' && c <= '9')
 	{
 		return (1);
 	}
-
-	return (0);
+	else
+	{
+		return (0);
 	}
 }
