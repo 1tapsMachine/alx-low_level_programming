@@ -4,11 +4,11 @@
 * @c: character to be checked
 * Return: 1 if c is a digit, 0 otherwise
 */
-int _isdigit(int c)
+int _isdigit(char c)
 {
-	int n=0;
+	char n = '0';
 
-	for (n=0; n<=9; n++)
+	for (; n <= '9'; n++)
 	{
 	if (c == n)
 	{
