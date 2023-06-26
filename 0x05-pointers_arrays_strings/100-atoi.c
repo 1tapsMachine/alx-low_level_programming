@@ -8,28 +8,21 @@
 */
 int _atoi(char *s)
 {
-	int mutiplier = 0, i = 0,  found = 0, sign = 1;
+	int i = 0, sign = 1, res = 0, found = 0;
+
 	while (*(s + i))
 	{
-		if (*(s+i) == "-")
-		{
+		if (*(s + i) == '-')
 			sign *= -1;
-		}
-		else
+		if (*(s + i) >= '0' && *(s + i) <= '9')
 		{
-			sign *= 1;
-		}
-		if (*(s+i) >= '0' && *(s+i) <='9')
-		{
-			mutiplier *= 10;
-			mutiplier += *(s+i) - '0';
+			res *= 10;
+			res += *(s + i) - '0';
 			found = 1;
 		}
-		else if (found) 
-		{
+		else if (found)
 			break;
-		}
 		i++;
 	}
-	return (mutiplier * sign);
+	return (res * sign);
 }
