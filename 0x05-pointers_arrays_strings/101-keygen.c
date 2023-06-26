@@ -12,7 +12,7 @@ int main(void)
 	char password[100], alNum[] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	unsigned int checksum = 0;
 	srand(time(NULL));
-	while (random < 2772)
+	while (random < (2772 - 122))
 	{
 		random = rand() % 62;
 		password[i] = alNum[random];
