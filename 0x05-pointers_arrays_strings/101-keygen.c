@@ -8,13 +8,20 @@
 */
 int main(void)
 {
-	int random, checksum;
+	int random, i = 0;
+	char password[100], alNum[] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	unsigned int checksum = 0;
 	srand(time(NULL));
-	while (random < 2772 && random >= 0)
+	while (random < 2772)
 	{
-		random = rand() % 10;
+		random = rand() % 62;
+		password[i] = alNum[random];
+		checksum += password[i];
+		i++;
 	}
-	checksum = 2772 - random;
-	printf("%d", checksum);
+	random = 2772 - checksum;
+	password[i] = random;
+	password[++i] = '\0';
+	printf("%s\n", password);
 	return (0);
 }
