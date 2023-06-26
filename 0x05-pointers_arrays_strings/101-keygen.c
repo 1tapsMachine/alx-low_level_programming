@@ -13,7 +13,7 @@ int main(void)
 	char password[100];
 
 	n = i = sum = 0;
-	char al[63] = "0123456789ABCDEFGHIJKLNMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char al[] = "0123456789ABCDEFGHIJKLNMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	srand(time(NULL));
 	while (sum < (2772 - 122))
 	{
