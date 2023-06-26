@@ -13,7 +13,8 @@ int main(void)
 	while (random < 2772 && random >= 0)
 	{
 		random = rand() % 10;
-		checksum = 2772 - random;
 	}
-	return (checksum);
+	checksum = 2772 - random;
+	printf("%d", checksum);
+	return (0);
 }
