@@ -8,19 +8,14 @@
 */
 int main(void)
 {
-	char comb[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	char pass[20];
-	int i = 0, add = 0, random;
+	char password[84];
+	int i = 0 , random, checksum;
 	srand(time(NULL));
-	while (add < 2772)
+	while (random <= 2772)
 	{
-		random = rand() % 62;
-		pass[i] = comb[random];
-		add += pass[i++];
+		random = rand() % 100;
+		printf("%d\n", random);
 	}
-	random = 2772 - add;
-	pass[i++] = random;
-	pass[i] = '\0';
-	printf("%s", pass);
-	return (0);
+	checksum = 2772 - random;
+	printf("%d", checksum);
 }
