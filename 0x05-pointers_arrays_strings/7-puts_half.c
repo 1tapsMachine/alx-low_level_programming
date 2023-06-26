@@ -17,11 +17,10 @@ void puts_half(char *str)
 	}
 	half = len / 2;
 	str -= len;
-	while (*(str + len) && len >= half)
+	while (*(str + half))
 	{
-		_putchar(*(str + len));
+		_putchar(*(str + half));
 		str++;
-		len++;
 	}
 	_putchar('\n');
 }
