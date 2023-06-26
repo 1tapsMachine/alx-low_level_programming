@@ -18,7 +18,7 @@ int main(void)
 	while (sum < (2772 - 122))
 	{
 		n = rand() % 62;
-		password[i] = al[n];
+		password[i] = alNum[n];
 		sum = sum + password[i];
 		i++;
 	}
