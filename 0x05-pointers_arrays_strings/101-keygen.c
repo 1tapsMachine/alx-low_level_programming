@@ -1,4 +1,5 @@
-#include "main.h"
+//#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /**
@@ -10,12 +11,11 @@ int main(void)
 {
 	int random, checksum;
 	srand(time(NULL));
-	while (random <= 2772)
+	while (random < 2772 && random >= 0)
 	{
-		random = rand() % 100;
-		printf("%d\n", random);
+		random = rand() % 10;
+		checksum = 2772 - random;
 	}
-	checksum = 2772 - random;
 	printf("%d", checksum);
 	return (0);
 }
