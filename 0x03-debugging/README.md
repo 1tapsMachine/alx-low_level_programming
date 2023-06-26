@@ -18,7 +18,6 @@ DEBUGGING
 |—— 3-print_remaining_days.c
 |—— main.h
 ```
-## Code Details
 ### Tested Platform
 - software
   ```
@@ -29,6 +28,4 @@ DEBUGGING
   CPU: Intel I7 8700K
   GPU: Nvidia GTX1650TI
   ```
-### Hyper parameters
-```
-```
+

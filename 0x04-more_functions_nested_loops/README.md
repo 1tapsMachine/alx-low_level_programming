@@ -1,42 +1,12 @@
 Title
 ===
-Abstract:xxx
+MORE FUNCTIONS, MORE NESTED LOOPS
 ## Papar Information
-- Title:  `paper name`
-- Authors:  `A`,`B`,`C`
-- Preprint: [https://arxiv.org/abs/xx]()
-- Full-preprint: [paper position]()
-- Video: [video position]()
+- Title:  `0x04-more_functions_nested_loops`
+- Authors:  `Aziz Sami`
 
-## Install & Dependence
-- python
-- pytorch
-- numpy
-
-## Dataset Preparation
-| Dataset | Download |
-| ---     | ---   |
-| dataset-A | [download]() |
-| dataset-B | [download]() |
-| dataset-C | [download]() |
-
-## Use
-- for train
-  ```
-  python train.py
-  ```
-- for test
-  ```
-  python test.py
-  ```
-## Pretrained model
-| Model | Download |
-| ---     | ---   |
-| Model-1 | [download]() |
-| Model-2 | [download]() |
-| Model-3 | [download]() |
-
-
+## Description
+using nested loops to print certain patterns and functions to check for uppercase, lowercase, digits, and print numbers.
 ## Directory Hierarchy
 ```
 |—— .gitignore
@@ -53,33 +23,15 @@ Abstract:xxx
 |—— 7-print_diagonal.c
 |—— 8-print_square.c
 |—— 9-fizz_buzz.c
-|—— cpsh
 ```
 ## Code Details
 ### Tested Platform
 - software
   ```
-  OS: Debian unstable (May 2021), Ubuntu LTS
-  Python: 3.8.5 (anaconda)
-  PyTorch: 1.7.1, 1.8.1
+  OS: Debian unstable (May 2021), Ubuntu LTS 20.04
   ```
 - hardware
   ```
-  CPU: Intel Xeon 6226R
-  GPU: Nvidia RTX3090 (24GB)
+  CPU : ryzen 5 3600
+  GPU : radeon rx 580
   ```
-### Hyper parameters
-```
-```
-## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
-  
-## License
-
-## Citing
-If you use xxx,please use the following BibTeX entry.
-```
-```
