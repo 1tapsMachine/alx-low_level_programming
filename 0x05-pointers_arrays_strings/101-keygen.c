@@ -8,8 +8,7 @@
 */
 int main(void)
 {
-	char password[84];
-	int i = 0 , random, checksum;
+	int random, checksum;
 	srand(time(NULL));
 	while (random <= 2772)
 	{
