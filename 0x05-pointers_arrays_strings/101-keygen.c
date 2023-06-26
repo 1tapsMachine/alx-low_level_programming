@@ -11,9 +11,9 @@ int main(void)
 	int i, n;
 	unsigned long int sum;
 	char password[100];
+	char alNum[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 	n = i = sum = 0;
-	char al[] = "0123456789ABCDEFGHIJKLNMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	srand(time(NULL));
 	while (sum < (2772 - 122))
 	{
