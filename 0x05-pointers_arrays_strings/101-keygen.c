@@ -1,5 +1,4 @@
-//#include "main.h"
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 #include <time.h>
 /**
@@ -16,6 +15,5 @@ int main(void)
 		random = rand() % 10;
 		checksum = 2772 - random;
 	}
-	printf("%d", checksum);
-	return (0);
+	return (checksum);
 }
