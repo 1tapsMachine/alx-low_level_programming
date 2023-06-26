@@ -17,4 +17,5 @@ int main(void)
 	}
 	checksum = 2772 - random;
 	printf("%d", checksum);
+	return (0);
 }
