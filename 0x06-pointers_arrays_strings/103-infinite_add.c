@@ -10,7 +10,7 @@ char *infinite_add(char *digit1, char *digit2, char *r, int size_r);
  * @r: the result.
  * @r_index: The current index.
  *
- * Return : result + index
+ * Return: result + index
  */
 char *stringAdd(char *digit1, char *digit2, char *r, int r_index)
 {
@@ -55,7 +55,7 @@ char *stringAdd(char *digit1, char *digit2, char *r, int r_index)
  * @digit2: The second number to be added.
  * @r: the result.
  * @size_r: The size
- * Return: The result of the addition.
+ * Return: stringAdd return value.
  */
 char *infinite_add(char *digit1, char *digit2, char *r, int size_r)
 {
