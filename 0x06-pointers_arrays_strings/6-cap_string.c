@@ -9,37 +9,31 @@
 */
 char *cap_string(char *str)
 {
-	char *separators = " \t\n,;.!?\"(){}";
-	int i = 0, j = 0, flag = 0;
+	int i, j;
+	int flagged;
+	char flags[] = ",;.!?(){}\n\t\" ";
 
-	for (; str[i] != '\0'; i++)
+	for (i = 0, flagged = 0; str[i] != '\0'; i++)
 	{
-		if (flag)
+		if (str[0] > 96 && str[0] < 123)
+			flagged = 1;
+		for (j = 0; flags[j] != '\0'; j++)
 		{
-			if ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'Z'))
-				flag = 0;
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (flags[j] == str[i])
+				flagged = 1;
+		}
+
+		if (flagged)
+		{
+			if (str[i] > 96 && str[i] < 123)
 			{
 				str[i] -= 32;
-				flag = 0;
+				flagged = 0;
 			}
-			for (j = 0; separators[j] != '\0'; j++)
-			{
-				if (str[i] == separators[j])
-					flag = 1;
-			}
-		}
-		else
-		{
-			if (str[0] >= 'a' && str[0] <= 'z')
-			{
-				flag = 1;
-			}
-			for (j = 0; separators[j] != '\0'; j++)
-			{
-				if (str[i] == separators[j])
-					flag = 1;
-			}
+			else if (str[i] > 64 && str[i] < 91)
+				flagged = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				flagged = 0;
 		}
 	}
 	return (str);
