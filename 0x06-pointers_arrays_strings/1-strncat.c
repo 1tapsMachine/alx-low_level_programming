@@ -9,7 +9,8 @@
 * Return: concatenated string up to n bytes
 */
 
-char *_strncat(char *dest, char *src, int n){
+char *_strncat(char *dest, char *src, int n)
+{
 	int i = 0, j;
 
 	while (dest[i] != '\0')
