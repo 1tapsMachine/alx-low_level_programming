@@ -15,10 +15,6 @@ void print_number(int n)
 		_putchar('-');
 		pN = -n;
 	}
-	else if (n == 0)
-	{
-		_putchar('0');
-	}
 	else
 	{
 		pN = n;
