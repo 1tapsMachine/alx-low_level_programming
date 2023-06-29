@@ -16,13 +16,17 @@ char *cap_string(char *str)
 	{
 		if (flag)
 		{
-
 			if ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'Z'))
 				flag = 0;
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
 				str[i] -= 32;
 				flag = 0;
+			}
+			for (j = 0; separators[j] != '\0'; j++)
+			{
+				if (str[i] == separators[j])
+					flag = 1;
 			}
 		}
 		else
