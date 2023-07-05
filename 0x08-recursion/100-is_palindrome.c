@@ -22,6 +22,8 @@ int get_last_char(char *s)
 int is_palindrome(char *s)
 {
 	if (*s != *(s + get_last_char(s) - 1))
+	{
 		return (0);
+	}
 	return (1);
 }
