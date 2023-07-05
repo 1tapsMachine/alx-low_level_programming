@@ -11,14 +11,14 @@ int _strlen_recursion(char *s)
 	return (1 + _strlen_recursion(++s));
 }
 /**
- * check - checks if string is palindrome
+ * check - checks if string is identical
  * @s1: string to be checked
  * @s2: string to be checked
  * @i: index
  * @j: index
  * @len1: length of string
  * @len2: length of string
- * Return: 1 if palindrome, 0 if not
+ * Return: 1 if identical, 0 if not
  */
 int check(char *s1, char *s2, int i, int j, int len1, int len2)
 {
@@ -28,12 +28,14 @@ int check(char *s1, char *s2, int i, int j, int len1, int len2)
 		return (check(s1, s2, i, j + 1, len1, len2));
 	else if (s2[j] == s1[i])
 		return (check(s1, s2, i + 1, j + 1, len1, len2));
-	else if (s2[j] != s1[i] && s2[j] != '*')
+	else if (s2[j] != s1[i])
 	{
 		if (s1[i] == '\0')
 			return (0);
-		else
-			return (check(s1, s2, i + 1, j, len1, len2));
+		else if (s2[j] == "*")
+		{
+			return (check(s1, s2, i + 1, j + 1, len1, len2));
+		}
 	}
 	return (0);
 }
