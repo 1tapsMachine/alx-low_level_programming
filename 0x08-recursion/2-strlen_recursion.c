@@ -1,8 +1,10 @@
 #include "main.h"
 /**
-*  - Entry point
+* _strlen_recursion - string length
 *
-* Return: 
+* @s: string
+*
+* Return: the length of a string
 */
 int _strlen_recursion(char *s)
 {
