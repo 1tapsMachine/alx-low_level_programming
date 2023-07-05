@@ -34,7 +34,7 @@ int check(char *s1, char *s2, int i, int j, int len1, int len2)
 			return (0);
 		else if (s2[j] == '*')
 		{
-			return (check(s1, s2, i + 1, j + 1, len1, len2));
+			return (check(s1, s2, i + 1, j, len1, len2));
 		}
 	}
 	return (0);
