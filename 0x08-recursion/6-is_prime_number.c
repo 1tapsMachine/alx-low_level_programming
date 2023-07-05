@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
 * factor - finds the prime number of a given number
 *
 * @n: number to find the prime number of
