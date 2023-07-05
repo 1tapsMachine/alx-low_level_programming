@@ -32,7 +32,7 @@ int check(char *s1, char *s2, int i, int j, int len1, int len2)
 	{
 		if (s1[i] == '\0')
 			return (0);
-		else if (s2[j] == "*")
+		else if (s2[j] == '*')
 		{
 			return (check(s1, s2, i + 1, j + 1, len1, len2));
 		}
