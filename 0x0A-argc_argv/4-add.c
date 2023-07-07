@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 
 	if (argc)
 	{
+		if (argc == 1)
+			return (printf("0\n"), 0);
 		for (; i < argc; i++)
 		{
 			if (atoi(argv[i]) == 0 && *argv[i] != '0')
