@@ -7,54 +7,43 @@
  */
 char **strtow(char *str)
 {
-	int i, j, k, wc, wl;
-	char **wds;
+	int i, j, k, len, words;
+	char **s;
 
-	if (str == NULL || str[0] == '\0')
-	{
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	}
-	for (i = 0, wc = 0; str[i]; i++)
-	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-		{
-			wc++;
-		}
-	}
-	if (wc == 0)
-	{
-		return (NULL);
-	}
-	wds = malloc(sizeof(char *) * (wc + 1));
-	if (wds == NULL)
-	{
-		return (NULL);
-	}
-	for (i = 0, k = 0; str[i] && k < wc; i++)
+	for (i = 0, len = 0, words = 0; str[i]; i++)
 	{
 		if (str[i] != ' ')
 		{
-			for (j = i, wl = 0; str[j] && str[j] != ' '; j++, wl++)
-			{
-				;
-			}
-			wds[k] = malloc(sizeof(char) * (wl + 1));
-			if (wds[k] == NULL)
-			{
-				for (; k >= 0; k--)
-				{
-					free(wds[k]);
-				}
-				free(wds);
-				return (NULL);
-			}
-			for (j = 0; j < wl; j++)
-			{
-				wds[k][j] = str[i++];
-			}
-			wds[k++][j] = '\0';
+			len++;
+			if (str[i + 1] == ' ' || str[i + 1] == '\0')
+				words++;
 		}
 	}
-	wds[k] = NULL;
-	return (wds);
+	if (words == 0)
+		return (NULL);
+	s = malloc(sizeof(char *) * (words + 1));
+	if (s == NULL)
+		return (NULL);
+	for (i = 0, k = 0; k < words; k++)
+	{
+		for (len = 0; str[i] == ' '; i++)
+			;
+		for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
+			len++;
+		s[k] = malloc(sizeof(char) * (len + 1));
+		if (s[k] == NULL)
+		{
+			for (k--; k >= 0; k--)
+				free(s[k]);
+			free(s);
+			return (NULL);
+		}
+		for (j = 0; j < len; j++)
+			s[k][j] = str[i++];
+		s[k][j] = '\0';
+	}
+	s[k] = NULL;
+	return (s);
 }
