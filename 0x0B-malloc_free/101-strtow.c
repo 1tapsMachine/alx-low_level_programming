@@ -8,6 +8,7 @@
 char **strtow(char *str)
 {
 	int i, j, k, len;
+	char **words;
 
 	if (str == NULL || str[0] == '\0')
 	{
@@ -24,7 +25,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	char **words = malloc(sizeof(char *) * (len + 1));
+	words = malloc(sizeof(char *) * (len + 1));
 	if (words == NULL)
 	{
 		return (NULL);
@@ -56,4 +57,6 @@ char **strtow(char *str)
 			i += len;
 		}
 	}
+	words[j] = NULL;
+	return (words);
 }
