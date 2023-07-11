@@ -7,7 +7,7 @@
  */
 char **strtow(char *str)
 {
-	int i, j, k, len, wc, wl;
+	int i, j, k, wc, wl;
 	char **wds;
 
 	if (str == NULL || str[0] == '\0')
@@ -52,7 +52,7 @@ char **strtow(char *str)
 			{
 				wds[k][j] = str[i++];
 			}
-			wds[k++][j] = '\0'
+			wds[k++][j] = '\0';
 		}
 	}
 	wds[k] = NULL;
