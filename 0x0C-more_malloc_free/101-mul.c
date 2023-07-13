@@ -51,7 +51,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
-
+	if (nbr1 > 19 || nbr2 > 19)
+	{
+		return (0);
+	}
 	printf("%i\n", atoi(strBuf) * atoi(strBuf2));
 	return (0);
 }
