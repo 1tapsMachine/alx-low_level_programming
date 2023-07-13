@@ -8,21 +8,21 @@
 */
 int  *array_range(int min, int max)
 {
-	int *range;
-	int iter;
-	int sz;
+	int *rng;
+	int add;
+	int var;
 
 	if (min > max)
 		return (NULL);
 
-	sz    = (max - min) + 1;
-	range = (int *) malloc(sz * sizeof(int));
+	var    = (max - min) + 1;
+	rng = (int *) malloc(var * sizeof(int));
 
-	if (range == NULL)
+	if (rng == NULL)
 		return (NULL);
 
-	for (iter = 0; iter < sz ; ++iter)
-		range[iter] = (min + iter);
+	for (add = 0; add < var ; ++add)
+		rng[add] = (min + add);
 
-	return (range);
+	return (rng);
 }

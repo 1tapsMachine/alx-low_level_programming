@@ -9,42 +9,31 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int iter = 0;
-	char *new_;
-	unsigned int l1;
-	unsigned int l2;
-	unsigned int all_len;
+	unsigned int add = 0;
+	char *newstring;
+	unsigned int len1;
+	unsigned int len2;
+	unsigned int LEN;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
-
-	l1 = strlen(s1);
-	l2 = strlen(s2);
-
-	if (n > l2)
-		all_len = l1 + l2;
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	if (n > len2)
+		LEN = len1 + len2;
 	else
-		all_len = l1 + n;
-
-	new_ = (char *) malloc(all_len + 1);
-
-	if (new_ == NULL)
+		LEN = len1 + n;
+	newstring = (char *) malloc(LEN + 1);
+	if (newstring == NULL)
 		return (NULL);
-
-	/* adding the first string. */
-	for (; iter < l1; ++iter)
-		new_[iter] = s1[iter];
-
-	/* adding the second string. */
-	for (iter = 0; (iter + l1) < all_len; ++iter)
-		new_[iter + l1] = s2[iter];
-
-	new_[all_len] = 0;
-
-	return (new_);
+	for (; add < len1; ++add)
+		newstring[add] = s1[add];
+	for (add = 0; (add + len1) < LEN; ++add)
+		newstring[add + len1] = s2[add];
+	newstring[LEN] = 0;
+	return (newstring);
 }
 
 

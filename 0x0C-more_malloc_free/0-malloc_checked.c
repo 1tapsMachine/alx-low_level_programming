@@ -7,15 +7,15 @@
 */
 void *malloc_checked(unsigned int b)
 {
-	void *pointer;
+	void *ptr;
 
 	if (b == INT_MAX)
 		exit(98);
 
-	pointer = (void *) malloc(b);
+	ptr = (void *) malloc(b);
 
-	if (pointer == NULL)
+	if (ptr == NULL)
 		exit(98);
 
-	return (pointer);
+	return (ptr);
 }

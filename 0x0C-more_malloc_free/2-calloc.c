@@ -8,19 +8,19 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *mem;
-	unsigned int iter;
+	void *spc;
+	unsigned int add;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	mem = (void *) malloc(nmemb * size);
+	spc = (void *) malloc(nmemb * size);
 
-	if (mem == NULL)
+	if (spc == NULL)
 		return (NULL);
 
-	for (iter = 0; iter < nmemb * size; ++iter)
-		((char *)(mem))[iter] = 0x0;
+	for (add = 0; add < nmemb * size; ++add)
+		((char *)(spc))[add] = 0x0;
 
-	return (mem);
+	return (spc);
 }

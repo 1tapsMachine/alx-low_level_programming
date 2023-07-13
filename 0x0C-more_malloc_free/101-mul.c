@@ -3,23 +3,23 @@
 
 
 /**
- * is_digits - a function that checks if a buffer has only digits.
+ * isDgt - a function that checks if a buffer has only digits.
  * @buffer: buffer that will be tested.
  * Return: 0 if a non-digit was found, 1 otherwise
  */
-int is_digits(char *buffer)
+int isDgt(char *buffer)
 {
-	int iter = 0;
+	int add = 0;
 
-	while (buffer[iter] != '\0')
+	while (buffer[add] != '\0')
 	{
-		if (!(buffer[iter] >= '0' && buffer[iter] <= '9'))
+		if (!(buffer[add] >= '0' && buffer[add] <= '9'))
 			return (0);
 
-		iter++;
+		add++;
 	}
 
-	return iter;
+	return add;
 }
 
 /**
@@ -31,29 +31,26 @@ int is_digits(char *buffer)
 int main(int argc, char *argv[])
 {
 
-	char *buff1;
-	char *buff2;
-	int count_1, count_2;
+	char *strBuf;
+	char *strBuf2;
+	int nbr1, nbr2;
 	if (argc < 3)
 	{
 		printf("Error\n");
 		return (98);
 	}
 
-	buff1 = argv[1];
-	buff2 = argv[2];
-	count_1 = is_digits(buff1);
-	count_2 = is_digits(buff2);
+	strBuf = argv[1];
+	strBuf2 = argv[2];
+	nbr1 = isDgt(strBuf);
+	nbr2 = isDgt(strBuf2);
 
-	if ((count_1 == 0) || (count_2 == 0))
+	if ((nbr1 == 0) || (nbr2 == 0))
 	{
 		printf("Error\n");
 		return (98);
 	}
-
-	if (count_1 > 19 || count_2 > 19)
-		return (0);
-
-	printf("%i\n", atoi(buff1) * atoi(buff2));
+	
+	printf("%i\n", atoi(strBuf) * atoi(strBuf2));
 	return (0);
 }
