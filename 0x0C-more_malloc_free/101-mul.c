@@ -19,7 +19,7 @@ int isDgt(char *buffer)
 		add++;
 	}
 
-	return add;
+	return (add);
 }
 
 /**
@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	char *strBuf;
 	char *strBuf2;
 	int nbr1, nbr2;
+
 	if (argc < 3)
 	{
 		printf("Error\n");
@@ -50,7 +51,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
-	
+
 	printf("%i\n", atoi(strBuf) * atoi(strBuf2));
 	return (0);
 }
