@@ -28,18 +28,3 @@ Project to learn about `malloc` and `free` and how to use them.
   CPU: AMD RYZEN 5 3600
   GPU: RADEON RX 580
   ```
-### Hyper parameters
-```
-```
-## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
-  
-## License
-
-## Citing
-If you use xxx,please use the following BibTeX entry.
-```
-```
