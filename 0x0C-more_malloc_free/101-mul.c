@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	char *strBuf;
 	char *strBuf2;
 	int nbr1, nbr2;
-	unsigned int result,val1,val2;
+	unsigned int result, val1, xval2;
 
 	if (argc < 3)
 	{
