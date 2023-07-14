@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 	{
 		return (0);
 	}
+	
 	printf("%i\n", atoi(strBuf) * atoi(strBuf2));
 	return (0);
 }
