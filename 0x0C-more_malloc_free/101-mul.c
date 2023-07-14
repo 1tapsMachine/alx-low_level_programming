@@ -1,61 +1,132 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-
+#include "main.h"
+#include <unistd.h>
+int _atoi(char *s);
+int _isdigit(int c);
+int is_numeric(char *str);
+void putint(int n);
+unsigned long multiply(unsigned int *num1, unsigned int *num2);
 /**
- * isDgt - a function that checks if a buffer has only digits.
- * @buffer: buffer that will be tested.
- * Return: 0 if a non-digit was found, 1 otherwise
+ * main - multiplies two positive numbers.
+ * @argc: number of command line arguments.
+ * @argv: arr of str that contains the arguments.
+ * Return: 0.
  */
-int isDgt(char *buffer)
+int main(int argc, char **argv)
 {
-	int add = 0;
+	unsigned int *num1, *num2;
+	unsigned long mul;
 
-	while (buffer[add] != '\0')
+	if (argc != 3 || !is_numeric(argv[1]) || !is_numeric(argv[2]))
 	{
-		if (!(buffer[add] >= '0' && buffer[add] <= '9'))
-			return (0);
-
-		add++;
+		write(1, "Error\n", 7);
+		exit(98);
 	}
+	num1 = malloc(sizeof(unsigned int));
+	num2 = malloc(sizeof(unsigned int));
+	if (num1 == NULL || num2 == NULL)
 
-	return (add);
+	{
+		write(1, "Error\n", 7);
+		free(num1);
+		free(num2);
+		exit(98);
+	}
+	*num1 = _atoi(argv[1]);
+	*num2 = _atoi(argv[2]);
+	mul = multiply(num1, num2);
+	putint(mul);
+	putchar('\n');
+
+	free(num1);
+	free(num2);
+
+	return (0);
 }
 
 /**
- * main - a program that multiplies two numbers.
- * @argc: count of arguments given to the programs
- * @argv: arguments given to the program.
- * Return: Always 0.
+ * is_numeric - function to check if a string is composed only of digits
+ * @str: ptr to string.
+ * Return: 1 or 0.
  */
-int main(int argc, char *argv[])
+int is_numeric(char *str)
 {
+	int i;
 
-	char *strBuf;
-	char *strBuf2;
-	int nbr1, nbr2;
-
-	if (argc < 3)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		printf("Error\n");
-		return (98);
+		if (!_isdigit(str[i]))
+		{
+			return (0);
+		}
 	}
+	return (1);
+}
+/**
+ * _atoi - convert str to int
+ * @s: the string
+ *
+ * Return: the number in integer
+ */
 
-	strBuf = argv[1];
-	strBuf2 = argv[2];
-	nbr1 = isDgt(strBuf);
-	nbr2 = isDgt(strBuf2);
+int _atoi(char *s)
+{
+	unsigned int num = 0;
+	int i = 0;
+	int sign = 1;
 
-	if ((nbr1 == 0) || (nbr2 == 0))
+	while (*(s + i))
 	{
-		printf("Error\n");
-		return (98);
+		if (*(s + i) == '-')
+			sign *= -1;
+		else if (*(s + i) >= '0' && *(s + i) <= '9')
+			num = (num * 10) + (*(s + i) - '0');
+		else if (num > 0)
+			break;
+		i++;
 	}
-	if (nbr1 > 30 || nbr2 > 30)
+	return (num * sign);
+}
+/**
+ * _isdigit - return 1 if the character is a digit, and 0 otherwise.
+ * @c: the number to be checked
+ * Return: Always 1 for true and 0 for false.
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
 	{
 		return (0);
 	}
-
-	printf("%i\n", atoi(strBuf) * atoi(strBuf2));
-	return (0);
+}
+/**
+ * putint - print integer using putchar.
+ * @n: integer.
+ *
+ */
+void putint(int n)
+{
+	if (n < 0)
+	{
+		putchar('-');
+		n = -n;
+	}
+	if (n > 9)
+	{
+		putint(n / 10);
+	}
+	putchar(n % 10 + '0');
+}
+/**
+ *  multiply - function to multiply two numbers
+ *@num1: ptr to num1.
+ *@num2: ptr to num2.
+ *Return: mul.
+ */
+unsigned long multiply(unsigned int *num1, unsigned int *num2)
+{
+	return ((*num1) * (*num2));
 }
