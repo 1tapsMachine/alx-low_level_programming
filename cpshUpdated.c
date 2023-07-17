@@ -5,7 +5,7 @@ char *pushToGit(char *message)
 {
   char *command = malloc(100);
 
-  sprintf(command, "git add . && git commit -m \"%s\" && git push", message);
+  sprintf(command, "git add . && git commit -m \"%s\" && git push && clear", message);
   system(command);
 
   return (command);
