@@ -1,6 +1,6 @@
-#ifndef _FUNCTION_LIKE_MACRO_H_
-#define _FUNCTION_LIKE_MACRO_H_
+#ifndef _SUM_LIKE_MACRO_
+#define _SUM_LIKE_MACRO_
 
 #define sum (x, y) ((x) + (y))
 
-#endif /* _FUNCTION_LIKE_MACRO_H_ */
+#endif /* _SUM_LIKE_MACRO_ */
