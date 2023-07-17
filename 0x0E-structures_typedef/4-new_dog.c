@@ -1,6 +1,6 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
+
 /**
  * _strcpy - Copy elements from a string to another.
  * @s: String.
@@ -35,14 +35,14 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+
 /**
-  * new_dog - Creates a new dog.
-  * @name: Name.
-  * @age: Age.
-  * @owner: Owner.
-  *
-  * Return: Pointer to new dog.
-  */
+ * new_dog - Create a new dog structure.
+ * @name: Name.
+ * @age: Age.
+ * @owner: Owner.
+ * Return: Always 0.
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *name_tmp;
@@ -50,30 +50,28 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dog_t *my_dog;
 
-
 	my_dog = malloc(sizeof(dog_t));
 	if (my_dog == NULL)
 	{
 		return (NULL);
 	}
-	name_tmp = malloc(_strlen(name));
+
+	name_tmp = malloc(_strlen(name) + 1);
 	if (name_tmp == NULL)
 	{
 		free(my_dog);
 		return (NULL);
 	}
-	owner_tmp = malloc(_strlen(owner));
+	owner_tmp = malloc(_strlen(owner) + 1);
 	if (owner_tmp == NULL)
 	{
-		free(name_tmp);
 		free(my_dog);
+		free(name_tmp);
 		return (NULL);
 	}
 
-
-	_strcpy(name_tmp, name);
-	_strcpy(owner_tmp, owner);
-
+	name_tmp = _strcpy(name, name_tmp);
+	owner_tmp = _strcpy(owner, owner_tmp);
 
 	my_dog->name = name_tmp;
 	my_dog->age = age;
