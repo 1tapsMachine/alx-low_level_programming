@@ -3,6 +3,28 @@
 #include <stdlib.h>
 #include <string.h>
 /**
+* _strcpy - copies the string pointed to by src, including the terminating
+* null byte (\0), to the buffer pointed to by dest
+*
+* @dest: pointer to the buffer in which we copy the string
+* @src: pointer to the string to be copied
+*
+* Return: the pointer to dest
+*/
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (*(src + i))
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = *(src + i);
+	return (dest);
+}
+
+/**
   * new_dog - Creates a new dog.
   * @name: Name.
   * @age: Age.
@@ -38,8 +60,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 
-	strcpy(name_tmp, name);
-	strcpy(owner_tmp, owner);
+	_strcpy(name_tmp, name);
+	_strcpy(owner_tmp, owner);
 
 
 	my_dog->name = name_tmp;
