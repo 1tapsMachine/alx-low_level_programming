@@ -4,7 +4,7 @@
  *
  * Return: Always 0
  */
-char *main(void)
+int main(void)
 {
-	return (__FILE__);
+	return (printf("%s\n", __FILE__),0);
 }
