@@ -1,7 +1,40 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+/**
+ * _strcpy - Copy elements from a string to another.
+ * @s: String.
+ * @tmp: Array where it's saved.
+ * Return: The array whit the elements.
+ */
+char *_strcpy(char *s, char *tmp)
+{
+	int j, i;
+
+	for (j = 0, i = 0; s[i] != '\0'; i++, j++)
+	{
+		tmp[j] = s[i];
+	}
+	tmp[j] = '\0';
+
+	return (tmp);
+}
+
+/**
+ * _strlen - Find the lenght of a string.
+ * @s: String.
+ * Return: The lenght, integer.
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 /**
   * new_dog - Creates a new dog.
   * @name: Name.
