@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - prints the opcodes of its own main function
  * @argc: number of arguments
@@ -26,5 +25,5 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < bytes; i++)
 		printf("%02x%c", *((unsigned char *)mPtr + i), i < bytes - 1 ? ' ' : '\n');
-
+	return (0);
 }
