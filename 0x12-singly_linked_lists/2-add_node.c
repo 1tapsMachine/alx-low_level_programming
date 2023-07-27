@@ -1,5 +1,4 @@
 #include "lists.h"
-#include "string.h"
 /**
  *add_node- adds a new node as the 1st node.
  * @head: ptr to a ptr to list_t
