@@ -10,6 +10,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i = 0;
+	
 	while(head)
 	{
 		if(!head->next)
