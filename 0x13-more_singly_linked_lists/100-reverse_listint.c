@@ -1,26 +1,25 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a listint_t list.
- * @head: pointer to the first element of the list.
- *
- * Return: void.
+ * reverse_listint - Reverses a listint_t linked
+ * list using two listint_t nodes.
+ * @head: Pointer to a pointer to the head of the list.
+ * Return: Pointer to the first node of the reversed list.
  */
-void free_listint2(listint_t **head)
+
+listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *current_node, *next_node;
+	listint_t *prev = NULL;
+	listint_t *current;
 
-	if (head == NULL)
-		return;
-
-	current_node = *head;
-
-	while (current_node != NULL)
+	while (*head)
 	{
-		next_node = current_node->next;
-		free(current_node);
-		current_node = next_node;
+		current = (*head)->next;
+		(*head)->next = prev;
+		prev = (*head);
+		(*head) = current;
 	}
 
-	*head = NULL;
+	(*head) = prev;
+	return (*head);
 }
