@@ -1,26 +1,40 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a listint_t list.
+ * find_listint_loop - finds the loop in a linked list.
  * @head: pointer to the first element of the list.
  *
- * Return: void.
+ * Return: address of the node where the loop starts, or NULL if there is no
+ * loop.
  */
-void free_listint2(listint_t **head)
+listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *current_node, *next_node;
+	listint_t *slow, *fast;
 
 	if (head == NULL)
-		return;
+		return (NULL);
 
-	current_node = *head;
+	slow = head;
+	fast = head;
 
-	while (current_node != NULL)
+	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
-		next_node = current_node->next;
-		free(current_node);
-		current_node = next_node;
+		slow = slow->next;
+		fast = (fast->next)->next;
+
+		if (slow == fast)
+		{
+			slow = head;
+
+			while (slow != fast)
+			{
+				slow = slow->next;
+				fast = fast->next;
+			}
+
+			return (slow);
+		}
 	}
 
-	*head = NULL;
+	return (NULL);
 }
