@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
- * flip_bits - returns the number of bits you would need to flip to get from
- * one number to another
- * @n: first number
- * @m: second number
- *
- * Return: number of bits to flip to get from n to m
+ * set_bit - sets the value of a bit to 1 at a given index
+ * @n: number to set bit in
+ * @index: index of bit to set
+ * Return: 1 if success, -1 if failure
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int bits = 0;
-	int i;
+	unsigned long int bit = 1;
 
-	for (i = 0; i < sizeof(unsigned long int) * 8; i++)
-	{
-		if (get_bit(n, i) != get_bit(m, i))
-			bits++;
-	}
-	return (bits);
+	if (index > sizeof(unsigned long int) * 8 - 1)
+		return (-1);
+	bit <<= index;
+	*n = *n | bit;
+	return (1);
 }
